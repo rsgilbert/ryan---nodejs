@@ -7,7 +7,7 @@ s.addListener('connection', function(conn) {
     // conn.
     conn.write('Hi there!');
     // conn.end()
-    // conn.send('Hello!!');
+    // conn.send('Hello!!'); // no such method
     // conn.close();
 });
 
