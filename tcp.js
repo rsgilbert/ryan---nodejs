@@ -1,3 +1,14 @@
-const tcp = require('tcp');
+const net = require('net');
 
-console.log(tcp);
+const s = net.createServer();
+
+s.addListener('connection', function(conn) {
+    console.log('Connected');
+    // conn.
+    conn.write('Hi there!');
+    // conn.end()
+    // conn.send('Hello!!');
+    // conn.close();
+});
+
+s.listen(8000);
